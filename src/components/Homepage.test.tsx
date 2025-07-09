@@ -14,9 +14,25 @@ import Homepage from "./Homepage";
 // });
 
 //UI test case
+// describe("testing home component", () => {
+//   it("render a heading", () => {
+//     render(<Homepage />);
+//     expect(screen.getByText("Hello World")).toBeInTheDocument();
+//   });
+// });
+
+//Ui test case multiple test on same screen
 describe("testing home component", () => {
-  it("render a heading", () => {
+  beforeEach(() => {
     render(<Homepage />);
+  });
+
+  it("render a heading", () => {
+    expect(screen.getByText("Hello World")).toBeInTheDocument();
+  });
+
+  // first version using getByText
+  it("render a heading inside h1", () => {
     expect(screen.getByText("Hello World")).toBeInTheDocument();
   });
 });
