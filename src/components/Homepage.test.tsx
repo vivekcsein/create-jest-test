@@ -7,4 +7,5 @@ const Sum = (a: number, b: number) => {
 
 test("add 2+3 should be equal to 5", () => {
   expect(Sum(2, 3)).toBe(5);
+  expect(Sum(6, 3)).not.toBe(5);
 });
