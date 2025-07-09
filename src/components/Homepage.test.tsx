@@ -35,4 +35,8 @@ describe("testing home component", () => {
   it("render a heading inside h1", () => {
     expect(screen.getByText("Hello World")).toBeInTheDocument();
   });
+  // second version using getByRole
+  it("render a heading inside h1", () => {
+    expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
+  });
 });
